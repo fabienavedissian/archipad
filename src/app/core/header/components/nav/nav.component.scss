@@ -1,0 +1,51 @@
+@import '/src/app/styles/common/variables';
+
+.nav {
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__link {
+        color: $secondary;
+        cursor: pointer;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 0 0.75rem;
+        padding: 1rem;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &::after {
+            background: #fff;
+            bottom: 0.5rem;
+            content: '';
+            height: 0.2rem;
+            left: 0;
+            margin: auto;
+            right: 0;
+            position: absolute;
+            transition: .3s all ease;
+            width: 0;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::after {
+                width: calc(100% - 2rem);
+            }
+        }
+
+        &--active {
+            color: #fff;
+
+            &::after {
+                width: calc(100% - 2rem);
+            }
+        }
+    }
+}

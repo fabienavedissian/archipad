@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header__topbar">
+        <h2 class="header__title">Projets</h2>
+        <app-nav></app-nav>
+        <div class="header__user">
+            <mat-icon aria-hidden="false" aria-label="User" class="header__user-icon">account_circle</mat-icon>
+            <span class="header__user-login">{{ (user$ | async)?.login }}</span>
+        </div>
+    </div>
+    <div class="header__bottombar">
+        <app-sub-nav></app-sub-nav>
+    </div>
+</header>

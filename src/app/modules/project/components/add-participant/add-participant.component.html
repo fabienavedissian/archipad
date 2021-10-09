@@ -1,0 +1,14 @@
+<section class="modal">
+    <h2 class="modal__title">{{ title }}</h2>
+    <mat-form-field appearance="fill" class="modal__form-field">
+        <mat-select class="modal__select" [(value)]="selected">
+          <mat-option *ngFor="let participant of dataSource$ | async" [value]="participant.name">
+            {{ participant.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="modal__container">
+          <button class="modal__button" (click)="onClickAdd()">Ajouter</button>
+          <button class="modal__button modal__button--danger" (click)="onClickClose()">Annuler</button>
+      </div>
+</section>

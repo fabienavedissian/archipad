@@ -1,0 +1,6 @@
+<section class="section">
+    <app-table-project title="Propriétaire du projet" [dataSource$]="projectParticipantService.ownerProject$" [displayedColumns]="displayedColumns" project="ownerProject$"></app-table-project>
+</section>
+<section class="section">
+    <app-table-project title="Projet partagé avec" [dataSource$]="projectParticipantService.participantProject$" [displayedColumns]="displayedColumns" [add]="true" [list$]="projectParticipantService.listParticipant$" color="#c4456b" project="participantProject$"></app-table-project>
+</section>

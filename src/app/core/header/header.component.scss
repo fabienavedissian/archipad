@@ -1,0 +1,59 @@
+@import '/src/app/styles/common/variables';
+
+.header {
+    background: $primary;
+    border-top: 0.2rem solid #fff;
+
+    &__title {
+        color: #fff;
+        font-weight: 100;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    &__user {
+        align-items: center;
+        display: flex;
+    }
+
+    &__user-login {
+        color: #fff;
+    }
+
+    &__user-icon {
+        color: #fff;
+        font-size: 3rem;
+        height: auto;
+        margin: 0 1rem 0 0;
+        width: auto;
+    }
+
+    &__topbar {
+        align-items: center;
+        display: flex;
+        height: 11rem;
+        justify-content: space-between;
+        padding: 0 10rem;
+
+        @media screen and (max-width: $L) {
+            padding: 0 5rem;
+        }
+
+        @media screen and (max-width: $S) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__bottombar {
+        background: $darkPrimary;
+        padding: 0 10rem;
+
+        @media screen and (max-width: $L) {
+            padding: 0 5rem;
+        }
+
+        @media screen and (max-width: $S) {
+            padding: 0 1rem;
+        }
+    }
+}

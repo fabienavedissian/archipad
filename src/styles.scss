@@ -1,0 +1,13 @@
+@import '/src/app/styles/common/variables';
+@import '/src/app/styles/common/reset';
+
+html, body {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    background: $background;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+}

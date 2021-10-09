@@ -1,0 +1,19 @@
+<nav class="sub-nav">
+    <ul class="sub-nav__list">
+        <li class="sub-nav__item">
+            <a routerLinkActive="sub-nav__link--active" class="sub-nav__link" (click)="onClickNav()">Informations</a>
+        </li>
+        <li class="sub-nav__item">
+            <a class="sub-nav__link" (click)="onClickNav()" routerLinkActive="sub-nav__link--active">Documents</a>
+        </li>
+        <li class="sub-nav__item">
+            <a class="sub-nav__link" routerLink="/" [routerLinkActiveOptions]="{exact: true}" (click)="onClickNav()" routerLinkActive="sub-nav__link--active">Partage</a>
+        </li>
+        <li class="sub-nav__item">
+            <a class="sub-nav__link" (click)="onClickNav()" routerLinkActive="sub-nav__link--active">Préférences</a>
+        </li>
+        <li class="sub-nav__item">
+            <a class="sub-nav__link" (click)="onClickNav()" routerLinkActive="sub-nav__link--active">Visioconférence</a>
+        </li>
+    </ul>
+</nav>
