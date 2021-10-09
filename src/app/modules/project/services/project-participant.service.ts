@@ -94,7 +94,6 @@ export class ProjectParticipantService {
             });
         }
         this[project].then((participants: ProjectParticipant[]) => {
-            console.log(participants)
             this[project] = new Promise<ProjectParticipant[]>((resolve, reject) => {
                 participants.push(participant);
                 resolve(participants)
