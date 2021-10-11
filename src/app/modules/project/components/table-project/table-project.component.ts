@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BehaviorSubject } from 'rxjs';
 import { ProjectParticipant } from '../../interfaces/project.interface';
@@ -9,7 +9,7 @@ import { AddParticipantComponent } from '../add-participant/add-participant.comp
   templateUrl: './table-project.component.html',
   styleUrls: ['./table-project.component.scss']
 })
-export class TableProjectComponent implements OnInit {
+export class TableProjectComponent {
 
   @Input() title: string = '';
   @Input() dataSource$: Promise<ProjectParticipant[]> | BehaviorSubject<ProjectParticipant[]> = new BehaviorSubject([]);
@@ -20,9 +20,6 @@ export class TableProjectComponent implements OnInit {
   @Input() project: string = '';
 
   constructor(public dialog: MatDialog) {
-  }
-
-  ngOnInit(): void {
   }
 
   public onClickAdd(): void {

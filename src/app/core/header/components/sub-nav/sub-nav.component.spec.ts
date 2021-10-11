@@ -1,5 +1,10 @@
+// MODULES
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from 'src/app/shared/shared.module';
 
+// COMPONENTS
 import { SubNavComponent } from './sub-nav.component';
 
 describe('SubNavComponent', () => {
@@ -8,7 +13,14 @@ describe('SubNavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubNavComponent ]
+      imports: [
+        BrowserAnimationsModule,
+        SharedModule,
+        RouterModule.forRoot([]),
+      ],
+      declarations: [
+        SubNavComponent
+      ]
     })
     .compileComponents();
   });

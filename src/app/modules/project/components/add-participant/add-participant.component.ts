@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AddParticipant } from '../../interfaces/add-participant.interface';
 import { ProjectParticipant } from '../../interfaces/project.interface';
@@ -9,7 +9,7 @@ import { ProjectParticipantService } from '../../services/project-participant.se
   templateUrl: './add-participant.component.html',
   styleUrls: ['./add-participant.component.scss']
 })
-export class AddParticipantComponent implements OnInit {
+export class AddParticipantComponent {
 
   public title: string = '';
   public selected: string;
@@ -27,13 +27,6 @@ export class AddParticipantComponent implements OnInit {
     this.dataSource$.then((projectParticipant: ProjectParticipant[]) => {
       this.selected = projectParticipant[0].name;
     });
-  }
-
-  ngOnInit(): void {
-  }
-
-  onClickClose(): void {
-    this.dialog.closeAll();
   }
 
   onClickAdd(): void {

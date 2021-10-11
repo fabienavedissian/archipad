@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { User, UserService } from '../user/user.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { User, UserService } from '../user/user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   public user$: Promise<User>;
 
@@ -14,9 +14,6 @@ export class HeaderComponent implements OnInit {
     userService: UserService
   ) {
     this.user$ = userService.login('test@login.com', 'secret!');
-  }
-
-  ngOnInit(): void {
   }
 
 }
